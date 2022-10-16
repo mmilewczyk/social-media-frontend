@@ -1,0 +1,6 @@
+.Group {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 20rem;
+    gap: 1rem;
+}

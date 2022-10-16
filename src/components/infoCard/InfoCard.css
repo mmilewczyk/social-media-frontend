@@ -1,0 +1,26 @@
+.InfoCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: var(--cardColor);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+}
+
+.InfoHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.InfoHead > div:hover {
+    cursor: pointer;
+}
+
+.Info > span:nth-of-type(1) {
+    font-weight: bold;
+}
+.Info > span:nth-of-type(2) {
+    color: var(--gray);
+}

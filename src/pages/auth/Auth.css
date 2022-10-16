@@ -1,0 +1,73 @@
+.Auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.Auth > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-left {
+    gap: 2rem;
+}
+
+.a-left > img {
+    width: 30rem;
+    height: 27rem;
+}
+
+.infoForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.infoInput {
+    border: none;
+    outline: none;
+    background-color: var(--inputColor);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+}
+
+.infoForm > div {
+    display: flex;
+    gap: 1rem;
+    height: 2rem;
+    width: 90%;
+}
+
+.infoButton {
+    width: 6rem;
+    height: 2rem;
+    align-self: flex-end;
+}
+
+.authForm {
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.authForm > div {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoSelect {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}

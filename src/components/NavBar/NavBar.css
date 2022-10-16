@@ -1,0 +1,35 @@
+.NavBar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 18rem auto 20rem;
+    gap: 1rem;
+    background: var(--cardColor);
+    padding: 10px 1rem;
+}
+
+.NavIcons {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.NavIcons > img, svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.NavIcons > a > img, svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.NavIcons > img, svg:hover {
+    cursor: pointer;
+}
+
+.logout-button {
+    width: 7rem;
+    height: 2rem;
+}

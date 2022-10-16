@@ -1,0 +1,33 @@
+.Comments > div:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.47);
+}
+
+.Comment {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 5px;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.c-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.c-detail > a{
+    display: flex;
+    flex-direction: row;
+}
+
+.c-detail > img {
+    width: 3rem;
+    border-radius: 50%;
+    bottom: -3rem;
+}
+
+.c-detail > a > img {
+    width: 3rem;
+    border-radius: 50%;
+    bottom: -3rem;
+}

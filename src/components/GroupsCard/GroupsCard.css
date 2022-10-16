@@ -1,0 +1,44 @@
+.GroupsCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.GroupC-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.GroupC-item > a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.GroupC-item > span:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.GroupC-item > a > span:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.GroupC-item > span:nth-of-type(2) {
+    font-size: 13px
+}
+
+.GroupC-item > a > span:nth-of-type(2) {
+    font-size: 13px
+}
+
+.GroupC-item:hover {
+    cursor: pointer;
+}
+
+.GroupC-item:hover > a{
+    cursor: pointer;
+}
