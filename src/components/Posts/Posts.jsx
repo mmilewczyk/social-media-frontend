@@ -3,7 +3,7 @@ import "./Posts.css"
 import Post from "../Post/Post";
 import {useDispatch, useSelector} from "react-redux";
 import {getAllLatestPosts, getSomeonePostsByUsername} from "../../actions/PostAction";
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import {getUserById} from "../../actions/UserAction";
 
 const Posts = () => {
@@ -11,6 +11,7 @@ const Posts = () => {
     let {posts, loading} = useSelector((state) => state.postReducer)
     let {user} = useSelector((state) => state.userReducer)
     const params = useParams();
+    const location = useLocation();
 
     useEffect(() => {
         if (params.id !== null && params.id !== undefined) {
@@ -21,13 +22,22 @@ const Posts = () => {
         }
     }, [dispatch, params.id]);
 
-    return (
-        <div className={"Posts"}>
-            {loading ? "Fetching Posts..." : posts && posts.content.length > 0 ?
-                posts.content.map((post, id) => {
-                    return <Post data={post} key={id}/>
-                }) : "No posts"}
-        </div>
+    return (<>
+            {location.pathname.includes("profile") ?
+                <div className={"Posts"}>
+                    {loading ? "Fetching Posts..." : posts && posts.content.length > 0 ?
+                        posts.content.filter(post => post.authorId == params.id).map((post, id) => {
+                            return <Post data={post} key={id}/>
+                        }) : "No posts"}
+                </div> :
+                <div className={"Posts"}>
+                    {loading ? "Fetching Posts..." : posts && posts.content.length > 0 ?
+                        posts.content.map((post, id) => {
+                            return <Post data={post} key={id}/>
+                        }) : "No posts"}
+                </div>
+            }
+        </>
     );
 };
 
